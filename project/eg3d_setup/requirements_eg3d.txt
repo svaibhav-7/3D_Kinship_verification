@@ -1,0 +1,22 @@
+# Additional requirements for EG3D training
+# Install after setting up EG3D base environment
+
+# For camera parameter extraction
+scipy>=1.7.0
+scikit-image>=0.18.0
+trimesh>=3.9.0
+
+# For progress bars and utilities
+tqdm>=4.62.0
+click>=8.0.0
+
+# For dataset preparation
+Pillow>=9.0.0
+
+# Already installed from preprocessing, but included for completeness
+numpy>=1.21.0
+torch>=1.9.0
+torchvision>=0.10.0
+
+# Ninja for faster CUDA compilation (optional but recommended)
+ninja>=1.10.0

@@ -1,0 +1,77 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Virtual Environments
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Datasets (Exclude originals and generated, keep processed)
+KinFaceW-II/
+# KinFaceW-II-Processed/  <- INCLUDE THIS (comment out)
+KinFaceW-II-EG3D/
+*.zip
+
+# Pretrained Models (DO NOT PUSH - Large files)
+eg3d/pretrained/*.pkl
+*.pkl
+*.pth
+*.pt
+*.ckpt
+
+# Training Outputs (DO NOT PUSH - Large)
+training-runs/
+multiview_output/
+output/
+results/
+
+# Generated Files
+camera_params/
+*.json
+!dataset.json
+
+# Logs
+*.log
+*.txt.log
+*.tfevents
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+*.ipynb
+
+# Large media files
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# Brain directory (Antigravity artifacts)
+.gemini/

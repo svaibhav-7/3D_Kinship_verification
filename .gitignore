@@ -73,3 +73,6 @@ desktop.ini
 *.mov
 *.mkv
 
+
+# EG3D Repository (Clone during setup)
+eg3d/

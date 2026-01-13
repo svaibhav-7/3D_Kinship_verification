@@ -95,9 +95,31 @@ class EnvironmentConfig:
     
     def _kaggle_config(self):
         """Kaggle-specific configuration."""
+
+        # 1. Try to find dataset automatically
+        kaggle_dataset_path = "/kaggle/input/kinface-ii-processed-256/KinFaceW-II-Processed"
+
+        if not os.path.exists(kaggle_dataset_path):
+            print(f"⚠️ Default path not found: {kaggle_dataset_path}")
+            print("🔍 Searching for dataset in /kaggle/input...")
+
+            found_path = None
+            if os.path.exists("/kaggle/input"):
+                for root, dirs, files in os.walk("/kaggle/input"):
+                    if "KinFaceW-II-Processed" in dirs:
+                        found_path = os.path.join(root, "KinFaceW-II-Processed")
+                        print(f"✅ Found dataset at: {found_path}")
+                        break
+
+            if found_path:
+                kaggle_dataset_path = found_path
+            else:
+                print("❌ Could not auto-detect dataset.")
+                # Fallback to user assumption or default
+
         return {
             # Dataset paths
-            "kaggle_dataset": "/kaggle/input/kinface-ii-processed-256/KinFaceW-II-Processed",
+            "kaggle_dataset": kaggle_dataset_path,
             "local_dataset": "KinFaceW-II-Processed",
             
             # Output paths

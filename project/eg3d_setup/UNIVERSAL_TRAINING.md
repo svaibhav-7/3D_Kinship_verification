@@ -20,7 +20,7 @@ This single script works in **both** Local and Kaggle environments!
 ### In Kaggle Notebook:
 
 ```python
-!wget https://raw.githubusercontent.com/svaibhav-7/3D_Kinship_verification/main/train_eg3d_universal.py
+!wget https://raw.githubusercontent.com/svaibhav-7/3D_Kinship_verification/main/project/eg3d_setup/train_eg3d_universal.py
 %run train_eg3d_universal.py
 ```
 
